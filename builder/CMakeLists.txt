@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.23 )
 set(CMAKE_BUILD_TYPE Release)
-project(Moteur_3d)
+project(Sort_Visualizer)
 
 
 file(GLOB SRCS
