@@ -1,0 +1,3 @@
+H:/BureauVrai/sort visualizer v2/builder/CMakeFiles/main.dir
+H:/BureauVrai/sort visualizer v2/builder/CMakeFiles/edit_cache.dir
+H:/BureauVrai/sort visualizer v2/builder/CMakeFiles/rebuild_cache.dir
