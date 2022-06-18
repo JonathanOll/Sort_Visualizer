@@ -1,1 +1,0 @@
- "C:/SFML-2.5.1/lib/libsfml-main.a" "C:/SFML-2.5.1/lib/libsfml-graphics.a" "C:/SFML-2.5.1/lib/libsfml-window.a" "C:/SFML-2.5.1/lib/libsfml-system.a" -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
