@@ -9,3 +9,18 @@ Un programme pour visualiser des algorithmes de tri de liste sous la forme d'une
 
 ## [Tri rapide](https://fr.wikipedia.org/wiki/Tri_rapide)
 ![2022-06-18-19-14-43](https://user-images.githubusercontent.com/70845195/174449454-c2c3a908-5b01-4012-a438-ffd8e418a71e.gif)
+
+### Tous les tris implémentés 
+- Tri par sélection
+- Tri par insertion
+- Tri à bulle
+- Tri Shell
+- Tri Cocktail
+- Tri à peigne
+- Tri pair-impair
+- Tri rapide
+- Tri gnome
+- Tri Oyelami
+- Tri pancake
+- Tri Stupide(Bogo)
+- Tri Bozo
