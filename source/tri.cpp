@@ -232,55 +232,6 @@ void tri_oyelami(vector<Element> &l) {
     } while (permut);
 }
 
-vector<Element*> fusion(vector<Element*> &a, vector<Element*> &b) {
-    cout << a.size() << " " << b.size() << endl;
-    if (a.size() == 0) {cout<<"a"<<endl;return b;}
-    if (b.size() == 0) {cout<<"a"<<endl;return a;}
-    if (a[0] <= b[0]) {
-        Element& first = *a[0];
-        vector<Element*> other = sublist(a, 1, a.size() - 1);
-        fusion(other, b);
-        insert(other, first);
-        return other;
-    } else {
-        Element& first = *b[0];
-        vector<Element*> other = sublist(b, 1, b.size() - 1);
-        fusion(a, other);
-        insert(other, first);
-        return other;
-    }
-}
-
-vector<Element*> tri_fusion_pointer(vector<Element*> &l) {
-    cout << l.size() << endl;
-    if (l.size() <= 2) return l;
-    else {
-        vector<Element*> le = sublist(l, 0, l.size()/2);
-        vector<Element*> r = sublist(l, l.size()/2 + 1, l.size());
-        vector<Element*> left = tri_fusion_pointer(le);
-        vector<Element*> right = tri_fusion_pointer(r);
-        vector<Element*> res = fusion(left, right);
-        return res;
-    }
-    tick();
-}
-
-vector<Element*> tri_fusion_normal(vector<Element> &l) {
-    if (l.size() <= 1) return vector<Element*>({&l[0]});
-    else {
-        vector<Element*> le = sublist(l, 0, l.size()/2);
-        vector<Element*> r = sublist(l, l.size()/2 + 1, l.size() - 1);
-        vector<Element*> left = tri_fusion_pointer(le);
-        vector<Element*> right = tri_fusion_pointer(r);
-        return fusion(left, right);
-    }
-}
-
-void tri_fusion(vector<Element> &l) {
-    tri_fusion_normal(l);
-}
-
-
 void flip(vector<Element> &l, int i) {
     int start = 0;
     while (start < i) {
@@ -366,8 +317,6 @@ void init() {
     names[*tri_gnome] = wstring(L"Tri gnome");
     functions.push_back(*tri_oyelami);
     names[*tri_oyelami] = wstring(L"Tri oyelami / Cocktail optimisé");
-    functions.push_back(*tri_fusion);
-    names[*tri_fusion] = wstring(L"Tri fusion");
     functions.push_back(*tri_pancake);
     names[*tri_pancake] = wstring(L"Tri pancake");
     functions.push_back(*tri_bogo);
